@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Krish TechnoLabs, All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ktpl_S3::elements" title="S3 " module="Ktpl_S3" parent="Ktpl_Core::menu" sortOrder="10" resource="Ktpl_S3::elements"/>
+
+        <add id="Ktpl_S3::config" title="S3 Configuration" module="Ktpl_S3" parent="Ktpl_S3::elements" sortOrder="20" action="adminhtml/system_config/edit/section/ktpl_s3" resource="Ktpl_S3::config"/>
+    </menu>
+</config>
