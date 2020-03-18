@@ -43,6 +43,97 @@ class Interceptor extends \Magento\MediaStorage\Helper\File\Storage\Database imp
     /**
      * {@inheritdoc}
      */
+    public function getStorageFileModel()
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getStorageFileModel');
+        if (!$pluginInfo) {
+            return parent::getStorageFileModel();
+        } else {
+            return $this->___callPlugins('getStorageFileModel', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getResourceStorageModel()
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getResourceStorageModel');
+        if (!$pluginInfo) {
+            return parent::getResourceStorageModel();
+        } else {
+            return $this->___callPlugins('getResourceStorageModel', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function saveFile($filename)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'saveFile');
+        if (!$pluginInfo) {
+            return parent::saveFile($filename);
+        } else {
+            return $this->___callPlugins('saveFile', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function renameFile($oldName, $newName)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'renameFile');
+        if (!$pluginInfo) {
+            return parent::renameFile($oldName, $newName);
+        } else {
+            return $this->___callPlugins('renameFile', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function copyFile($oldName, $newName)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'copyFile');
+        if (!$pluginInfo) {
+            return parent::copyFile($oldName, $newName);
+        } else {
+            return $this->___callPlugins('copyFile', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function fileExists($filename)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'fileExists');
+        if (!$pluginInfo) {
+            return parent::fileExists($filename);
+        } else {
+            return $this->___callPlugins('fileExists', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getUniqueFilename($directory, $filename)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getUniqueFilename');
+        if (!$pluginInfo) {
+            return parent::getUniqueFilename($directory, $filename);
+        } else {
+            return $this->___callPlugins('getUniqueFilename', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function saveFileToFilesystem($filename)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'saveFileToFilesystem');
@@ -82,6 +173,19 @@ class Interceptor extends \Magento\MediaStorage\Helper\File\Storage\Database imp
     /**
      * {@inheritdoc}
      */
+    public function deleteFile($filename)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'deleteFile');
+        if (!$pluginInfo) {
+            return parent::deleteFile($filename);
+        } else {
+            return $this->___callPlugins('deleteFile', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function saveUploadedFile($result)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'saveUploadedFile');
@@ -89,6 +193,32 @@ class Interceptor extends \Magento\MediaStorage\Helper\File\Storage\Database imp
             return parent::saveUploadedFile($result);
         } else {
             return $this->___callPlugins('saveUploadedFile', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getMediaBaseDir()
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getMediaBaseDir');
+        if (!$pluginInfo) {
+            return parent::getMediaBaseDir();
+        } else {
+            return $this->___callPlugins('getMediaBaseDir', func_get_args(), $pluginInfo);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function isModuleOutputEnabled($moduleName = null)
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'isModuleOutputEnabled');
+        if (!$pluginInfo) {
+            return parent::isModuleOutputEnabled($moduleName);
+        } else {
+            return $this->___callPlugins('isModuleOutputEnabled', func_get_args(), $pluginInfo);
         }
     }
 }

@@ -26,4 +26,17 @@ class Interceptor extends \Magento\MediaStorage\Service\ImageResize implements \
             return $this->___callPlugins('resizeFromImageName', func_get_args(), $pluginInfo);
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function resizeFromThemes(?array $themes = null) : \Generator
+    {
+        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'resizeFromThemes');
+        if (!$pluginInfo) {
+            return parent::resizeFromThemes($themes);
+        } else {
+            return $this->___callPlugins('resizeFromThemes', func_get_args(), $pluginInfo);
+        }
+    }
 }

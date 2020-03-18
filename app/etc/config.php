@@ -173,7 +173,6 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Ktpl_Core' => 1,
-        'Ktpl_S3' => 1,
-        'Thai_S3' => 0
+        'Ktpl_S3' => 1
     ]
 ];
