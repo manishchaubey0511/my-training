@@ -1,1 +1,1 @@
-# my-training
+# Custom extension developed
